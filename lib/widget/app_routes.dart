@@ -23,7 +23,7 @@ class AppRoute {
 
 class RouteConst {
   static const String main = '/main';
-  static const String account = '/account';
+  static const String splash = '/splash';
   static const String onBoarding = '/on_boarding';
   static const String auth = '/auth';
   static const String message = '/main/message';

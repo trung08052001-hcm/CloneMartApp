@@ -1,5 +1,6 @@
 import 'package:clonemartapp/presentation/app/bloc/app_bloc.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
+import 'package:clonemartapp/widget/page/splash_screen/bloc/splash_screen_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 class BlocDI {
@@ -23,20 +24,20 @@ class BlocDI {
       ///H
 
       ///M
-      ..registerLazySingleton<MainBloc>(MainBloc.new);
+      ..registerLazySingleton<MainBloc>(MainBloc.new)
 
-    ///N
+      ///N
 
-    ///L
+      ///L
 
-    ///O
+      ///O
 
-    ///P
+      ///P
 
-    ///R
+      ///R
 
-    ///S
-
+      ///S
+      ..registerLazySingleton<SplashScreenBloc>(SplashScreenBloc.new);
     //V
   }
 }

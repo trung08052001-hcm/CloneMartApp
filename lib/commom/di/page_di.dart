@@ -1,5 +1,6 @@
 import 'package:clonemartapp/widget/app_routes.dart';
 import 'package:clonemartapp/widget/page/main/main_page.dart';
+import 'package:clonemartapp/widget/page/splash_screen/splash_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -8,28 +9,30 @@ class PageDI {
 
   static Future<void> init(GetIt injector) async {
     injector
-          //A
+      //A
 
-          //C
+      //C
 
-          //D
+      //D
 
-          //F
+      //F
 
-          //L
+      //L
 
-          //M
-          ..registerFactory<Widget>(MainPage.new, instanceName: RouteConst.main)
-        //N
+      //M
+      ..registerFactory<Widget>(MainPage.new, instanceName: RouteConst.main)
+      //N
 
-        //P
+      //P
 
-        //O
+      //O
 
-        //S
-        // ..registerFactory<Widget>(SearchResultPage.new,
-        //     instanceName: RouteConst.search);
-        ;
+      //S
+      ..registerFactory<Widget>(SplashScreenPage.new,
+          instanceName: RouteConst.splash);
+    // ..registerFactory<Widget>(SearchResultPage.new,
+    //     instanceName: RouteConst.search);
+
     //V
 
     //R
