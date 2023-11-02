@@ -1,4 +1,10 @@
-part of 'auth_bloc.dart';
+import 'package:clonemartapp/widget/page/auth/authentication/widget/auth_enum.dart';
 
-@immutable
-sealed class AuthEvent {}
+import 'package:flutter/foundation.dart';
+
+class ChangeAuthTypeEvent {
+  final AuthType type;
+  ChangeAuthTypeEvent({
+    required this.type,
+  });
+}

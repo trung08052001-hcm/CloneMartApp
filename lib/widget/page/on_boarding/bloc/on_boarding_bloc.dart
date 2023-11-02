@@ -45,7 +45,7 @@ class OnBoardingBloc extends Bloc<OnBoardingEvent, OnBoardingLoaded> {
     emit(NavigateAndRemoveState(
       routeName: RouteConst.main,
       predicate: (Route<dynamic> route) =>
-          route.settings.name == RouteConst.main,
+          route.settings.name == RouteConst.onBoarding,
     ) as OnBoardingLoaded);
   }
 }

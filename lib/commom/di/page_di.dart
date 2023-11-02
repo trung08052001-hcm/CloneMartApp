@@ -1,4 +1,5 @@
 import 'package:clonemartapp/widget/app_routes.dart';
+import 'package:clonemartapp/widget/page/auth/authentication/auth_page.dart';
 import 'package:clonemartapp/widget/page/main/main_page.dart';
 import 'package:clonemartapp/widget/page/on_boarding/on_boarding_page.dart';
 import 'package:clonemartapp/widget/page/splash_screen/splash_screen_page.dart';
@@ -11,7 +12,7 @@ class PageDI {
   static Future<void> init(GetIt injector) async {
     injector
       //A
-
+      ..registerFactory<Widget>(AuthPage.new, instanceName: RouteConst.auth)
       //C
 
       //D

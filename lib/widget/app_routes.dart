@@ -25,7 +25,7 @@ class RouteConst {
   static const String main = '/main';
   static const String splash = '/splash';
   static const String onBoarding = '/on_boarding';
-  // static const String auth = '/auth';
+  static const String auth = '/auth';
   // static const String message = '/main/message';
   // static const String doctorList = 'main/doctor_list';
   // static const String notification = 'main/notification';

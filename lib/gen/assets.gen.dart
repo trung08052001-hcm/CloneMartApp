@@ -20,6 +20,45 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home.svg
   SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
 
+  /// File path: assets/icons/icon_back_ios.svg
+  SvgGenImage get iconBackIos =>
+      const SvgGenImage('assets/icons/icon_back_ios.svg');
+
+  /// File path: assets/icons/icon_edit.svg
+  SvgGenImage get iconEdit => const SvgGenImage('assets/icons/icon_edit.svg');
+
+  /// File path: assets/icons/icon_email.svg
+  SvgGenImage get iconEmail => const SvgGenImage('assets/icons/icon_email.svg');
+
+  /// File path: assets/icons/icon_facebook.svg
+  SvgGenImage get iconFacebook =>
+      const SvgGenImage('assets/icons/icon_facebook.svg');
+
+  /// File path: assets/icons/icon_google.svg
+  SvgGenImage get iconGoogle =>
+      const SvgGenImage('assets/icons/icon_google.svg');
+
+  /// File path: assets/icons/icon_hide_password.svg
+  SvgGenImage get iconHidePassword =>
+      const SvgGenImage('assets/icons/icon_hide_password.svg');
+
+  /// File path: assets/icons/icon_lock.svg
+  SvgGenImage get iconLock => const SvgGenImage('assets/icons/icon_lock.svg');
+
+  /// File path: assets/icons/icon_phone.svg
+  SvgGenImage get iconPhone => const SvgGenImage('assets/icons/icon_phone.svg');
+
+  /// File path: assets/icons/icon_show_password.svg
+  SvgGenImage get iconShowPassword =>
+      const SvgGenImage('assets/icons/icon_show_password.svg');
+
+  /// File path: assets/icons/icon_user copy.svg
+  SvgGenImage get iconUserCopy =>
+      const SvgGenImage('assets/icons/icon_user copy.svg');
+
+  /// File path: assets/icons/icon_user.svg
+  SvgGenImage get iconUser => const SvgGenImage('assets/icons/icon_user.svg');
+
   /// File path: assets/icons/message.svg
   SvgGenImage get message => const SvgGenImage('assets/icons/message.svg');
 
@@ -30,7 +69,24 @@ class $AssetsIconsGen {
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [category, home, message, time, user];
+  List<SvgGenImage> get values => [
+        category,
+        home,
+        iconBackIos,
+        iconEdit,
+        iconEmail,
+        iconFacebook,
+        iconGoogle,
+        iconHidePassword,
+        iconLock,
+        iconPhone,
+        iconShowPassword,
+        iconUserCopy,
+        iconUser,
+        message,
+        time,
+        user
+      ];
 }
 
 class $AssetsImagesGen {
