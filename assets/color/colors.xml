@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#5ab078</color>
+    <color name="secondaryColor">#FB8500</color>
+    <color name="skinColor">#fefaeb</color>
+    <color name="lightSecondaryColor">#fff5eb</color>
+    <color name="lightPrimaryColor">#ebfbeb</color>
+    <color name="lightBlueColor">#eff5ff</color>
+    <color name="lightPinkColor">#ffefef</color>
+    <color name="greenColor">#00cc00</color>
+    <color name="greyColor">#f1f2f1</color>
+    <color name="whiteColor">#FFFFFF</color>
+    <color name="blackColor">#030303</color>
+    <color name="brownColor">#765127</color>
+    <color name="dividerColor">#d8d8da</color>
+    <color name="itemBackgroundColor">#f9f9f9</color>
+</resources>

@@ -2,7 +2,6 @@ import 'package:clonemartapp/commom/di/app_injector.dart';
 import 'package:clonemartapp/services/navigation_service.dart';
 import 'package:clonemartapp/widget/app_routes.dart';
 import 'package:clonemartapp/widget/page/splash_screen/bloc/splash_screen_bloc.dart';
-import 'package:clonemartapp/widget/page/splash_screen/bloc/splash_screen_event.dart';
 import 'package:clonemartapp/widget/page/splash_screen/bloc/splash_screen_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,7 +25,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
 
   void navigateToMain() {
     if (!hasNavigatedToMain) {
-      getIt<NavigationService>().navigateTo(RouteConst.main);
+      getIt<NavigationService>().navigateTo(RouteConst.onBoarding);
       hasNavigatedToMain = true;
     }
   }

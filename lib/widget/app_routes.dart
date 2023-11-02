@@ -25,14 +25,14 @@ class RouteConst {
   static const String main = '/main';
   static const String splash = '/splash';
   static const String onBoarding = '/on_boarding';
-  static const String auth = '/auth';
-  static const String message = '/main/message';
-  static const String doctorList = 'main/doctor_list';
-  static const String notification = 'main/notification';
-  static const String payment = 'main/payment';
-  static const String forgetPassowd = '/auth/forget_password';
-  static const String otpVerification =
-      '/auth/forget_password/otp_verification';
-  static const String search = 'main/search';
-  static const String appointmentDetail = 'main/appointment_detail';
+  // static const String auth = '/auth';
+  // static const String message = '/main/message';
+  // static const String doctorList = 'main/doctor_list';
+  // static const String notification = 'main/notification';
+  // static const String payment = 'main/payment';
+  // static const String forgetPassowd = '/auth/forget_password';
+  // static const String otpVerification =
+  //     '/auth/forget_password/otp_verification';
+  // static const String search = 'main/search';
+  // static const String appointmentDetail = 'main/appointment_detail';
 }
