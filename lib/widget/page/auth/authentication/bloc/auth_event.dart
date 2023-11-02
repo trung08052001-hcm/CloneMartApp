@@ -1,4 +1,4 @@
-import 'package:clonemartapp/widget/page/auth/authentication/widget/auth_enum.dart';
+import 'package:clonemartapp/data/enum/auth_enum.dart';
 
 import 'package:flutter/foundation.dart';
 

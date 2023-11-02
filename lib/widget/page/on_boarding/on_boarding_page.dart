@@ -86,21 +86,21 @@ class OnBoardingPage extends StatelessWidget {
                     onTap: () {
                       bloc.add(ChangePageEvent(index: state.currentIndex + 1));
                     },
-                    title: "title",
+                    title: "Next",
                     borderRadius: 20.0,
                     height: 50.0,
                   ),
                   const SizedBox(
                     height: 15.0,
                   ),
-                  if (state.currentIndex != 2)
+                  if (state.currentIndex != 3)
                     TextButtonApp(
-                      title: "S().skip",
+                      title: "S().Start",
                       fontSize: 14,
                       colorText: kGreyColor,
                       onTap: () {
                         bloc.add(StartLoginEvent());
-                        getIt<NavigationService>().navigateTo(RouteConst.main);
+                        getIt<NavigationService>().navigateTo(RouteConst.auth);
                       },
                     ),
                 ],

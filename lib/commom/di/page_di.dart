@@ -1,5 +1,7 @@
 import 'package:clonemartapp/widget/app_routes.dart';
 import 'package:clonemartapp/widget/page/auth/authentication/auth_page.dart';
+import 'package:clonemartapp/widget/page/auth/forgetpassword/forget_pass_page.dart';
+import 'package:clonemartapp/widget/page/auth/forgetpassword/page/otp_verification/otp_verification_page.dart';
 import 'package:clonemartapp/widget/page/main/main_page.dart';
 import 'package:clonemartapp/widget/page/on_boarding/on_boarding_page.dart';
 import 'package:clonemartapp/widget/page/splash_screen/splash_screen_page.dart';
@@ -18,7 +20,8 @@ class PageDI {
       //D
 
       //F
-
+      ..registerFactory<Widget>(ForgetPasswordPage.new,
+          instanceName: RouteConst.forgetPassowd)
       //L
 
       //M
@@ -30,6 +33,8 @@ class PageDI {
       //O
       ..registerFactory<Widget>(OnBoardingPage.new,
           instanceName: RouteConst.onBoarding)
+      ..registerFactory<Widget>(OtpVerificationPage.new,
+          instanceName: RouteConst.otpVerification)
       //S
       ..registerFactory<Widget>(SplashScreenPage.new,
           instanceName: RouteConst.splash);

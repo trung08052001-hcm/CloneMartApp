@@ -3,6 +3,7 @@ import 'package:clonemartapp/gen/assets.gen.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/themes/text_theme.dart';
 import 'package:clonemartapp/services/navigation_service.dart';
+import 'package:clonemartapp/widget/app_routes.dart';
 
 import 'package:clonemartapp/widget/page/auth/authentication/widget/section_information.dart';
 import 'package:clonemartapp/widget/page/button/text_button.dart';
@@ -52,7 +53,7 @@ class LoginSection extends StatelessWidget {
           child: TextButtonApp(
             title: 'S().forgot_password',
             onTap: () {
-              // navigationService.navigateTo(RouteConst.forgetPassowd);
+              navigationService.navigateTo(RouteConst.forgetPassowd);
             },
           ),
         ),

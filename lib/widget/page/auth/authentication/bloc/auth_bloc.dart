@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:clonemartapp/widget/page/auth/authentication/bloc/auth_event.dart';
-import 'package:clonemartapp/widget/page/auth/authentication/widget/auth_enum.dart';
-import 'package:meta/meta.dart';
+import 'package:clonemartapp/data/enum/auth_enum.dart';
 
 part 'auth_state.dart';
 

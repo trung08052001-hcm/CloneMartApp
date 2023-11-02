@@ -1,12 +1,14 @@
 import 'package:clonemartapp/commom/di/app_injector.dart';
 import 'package:clonemartapp/widget/appscaffold/app_scaffold.dart';
 import 'package:clonemartapp/widget/page/auth/authentication/bloc/auth_bloc.dart';
-import 'package:clonemartapp/widget/page/auth/authentication/widget/auth_enum.dart';
+import 'package:clonemartapp/data/enum/auth_enum.dart';
 import 'package:clonemartapp/widget/page/auth/authentication/widget/auth_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthPage extends StatelessWidget {
+  const AuthPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final bloc = getIt<AuthBloc>();

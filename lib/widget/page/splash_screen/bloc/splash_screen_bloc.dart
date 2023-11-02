@@ -7,7 +7,7 @@ class SplashScreenBloc extends Bloc<SplashScreenEvent, SplashScreenState> {
     // Đăng ký trình xử lý sự kiện cho SplashScreenInitialized
     on<SplashScreenInitialized>((event, emit) async {
       // Thực hiện xử lý cho sự kiện này ở đây
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 3));
       emit(SplashScreenFinished());
     });
   }

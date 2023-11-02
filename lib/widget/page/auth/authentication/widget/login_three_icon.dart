@@ -1,5 +1,5 @@
 import 'package:clonemartapp/res/dimens.dart';
-import 'package:clonemartapp/widget/page/auth/authentication/widget/auth_enum.dart';
+import 'package:clonemartapp/data/enum/auth_enum.dart';
 import 'package:clonemartapp/widget/page/button/app_button.dart';
 import 'package:flutter/material.dart';
 
