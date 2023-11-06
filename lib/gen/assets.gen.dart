@@ -20,15 +20,29 @@ class $AssetsIconsGen {
   /// File path: assets/icons/home.svg
   SvgGenImage get home => const SvgGenImage('assets/icons/home.svg');
 
+  /// File path: assets/icons/icon_account.svg
+  SvgGenImage get iconAccount =>
+      const SvgGenImage('assets/icons/icon_account.svg');
+
+  /// File path: assets/icons/icon_add.svg
+  SvgGenImage get iconAdd => const SvgGenImage('assets/icons/icon_add.svg');
+
   /// File path: assets/icons/icon_back_ios.svg
   SvgGenImage get iconBackIos =>
       const SvgGenImage('assets/icons/icon_back_ios.svg');
+
+  /// File path: assets/icons/icon_card.svg
+  SvgGenImage get iconCard => const SvgGenImage('assets/icons/icon_card.svg');
 
   /// File path: assets/icons/icon_edit.svg
   SvgGenImage get iconEdit => const SvgGenImage('assets/icons/icon_edit.svg');
 
   /// File path: assets/icons/icon_email.svg
   SvgGenImage get iconEmail => const SvgGenImage('assets/icons/icon_email.svg');
+
+  /// File path: assets/icons/icon_exclamation.svg
+  SvgGenImage get iconExclamation =>
+      const SvgGenImage('assets/icons/icon_exclamation.svg');
 
   /// File path: assets/icons/icon_facebook.svg
   SvgGenImage get iconFacebook =>
@@ -42,15 +56,50 @@ class $AssetsIconsGen {
   SvgGenImage get iconHidePassword =>
       const SvgGenImage('assets/icons/icon_hide_password.svg');
 
+  /// File path: assets/icons/icon_history.svg
+  SvgGenImage get iconHistory =>
+      const SvgGenImage('assets/icons/icon_history.svg');
+
   /// File path: assets/icons/icon_lock.svg
   SvgGenImage get iconLock => const SvgGenImage('assets/icons/icon_lock.svg');
+
+  /// File path: assets/icons/icon_logout.svg
+  SvgGenImage get iconLogout =>
+      const SvgGenImage('assets/icons/icon_logout.svg');
+
+  /// File path: assets/icons/icon_mark.svg
+  SvgGenImage get iconMark => const SvgGenImage('assets/icons/icon_mark.svg');
+
+  /// File path: assets/icons/icon_mastercard.svg
+  SvgGenImage get iconMastercard =>
+      const SvgGenImage('assets/icons/icon_mastercard.svg');
+
+  /// File path: assets/icons/icon_paypal.svg
+  SvgGenImage get iconPaypal =>
+      const SvgGenImage('assets/icons/icon_paypal.svg');
+
+  /// File path: assets/icons/icon_paystack.svg
+  SvgGenImage get iconPaystack =>
+      const SvgGenImage('assets/icons/icon_paystack.svg');
 
   /// File path: assets/icons/icon_phone.svg
   SvgGenImage get iconPhone => const SvgGenImage('assets/icons/icon_phone.svg');
 
+  /// File path: assets/icons/icon_right_arrow.svg
+  SvgGenImage get iconRightArrow =>
+      const SvgGenImage('assets/icons/icon_right_arrow.svg');
+
   /// File path: assets/icons/icon_show_password.svg
   SvgGenImage get iconShowPassword =>
       const SvgGenImage('assets/icons/icon_show_password.svg');
+
+  /// File path: assets/icons/icon_success.svg
+  SvgGenImage get iconSuccess =>
+      const SvgGenImage('assets/icons/icon_success.svg');
+
+  /// File path: assets/icons/icon_support.svg
+  SvgGenImage get iconSupport =>
+      const SvgGenImage('assets/icons/icon_support.svg');
 
   /// File path: assets/icons/icon_user copy.svg
   SvgGenImage get iconUserCopy =>
@@ -58,6 +107,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/icon_user.svg
   SvgGenImage get iconUser => const SvgGenImage('assets/icons/icon_user.svg');
+
+  /// File path: assets/icons/icon_visa.svg
+  SvgGenImage get iconVisa => const SvgGenImage('assets/icons/icon_visa.svg');
 
   /// File path: assets/icons/message.svg
   SvgGenImage get message => const SvgGenImage('assets/icons/message.svg');
@@ -68,21 +120,43 @@ class $AssetsIconsGen {
   /// File path: assets/icons/user.svg
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
+  /// File path: assets/icons/icon_search.svg
+  SvgGenImage get iconSearch =>
+      const SvgGenImage('assets/icons/icon_search.svg');
+
+  /// File path: assets/icons/icon_search_mic.svg
+  SvgGenImage get iconSearchMic =>
+      const SvgGenImage('assets/icons/icon_search_mic.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         category,
         home,
+        iconAccount,
+        iconAdd,
         iconBackIos,
+        iconCard,
         iconEdit,
         iconEmail,
+        iconExclamation,
         iconFacebook,
         iconGoogle,
         iconHidePassword,
+        iconHistory,
         iconLock,
+        iconLogout,
+        iconMark,
+        iconMastercard,
+        iconPaypal,
+        iconPaystack,
         iconPhone,
+        iconRightArrow,
         iconShowPassword,
+        iconSuccess,
+        iconSupport,
         iconUserCopy,
         iconUser,
+        iconVisa,
         message,
         time,
         user

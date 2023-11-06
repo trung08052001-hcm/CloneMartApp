@@ -2,8 +2,10 @@ import 'package:clonemartapp/presentation/app/bloc/app_bloc.dart';
 import 'package:clonemartapp/widget/page/auth/authentication/bloc/auth_bloc.dart';
 import 'package:clonemartapp/widget/page/auth/forgetpassword/bloc/forget_pass_bloc.dart';
 import 'package:clonemartapp/widget/page/auth/forgetpassword/page/otp_verification/bloc/otp_verification_bloc.dart';
+import 'package:clonemartapp/widget/page/channel/bloc/channel_bloc.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
 import 'package:clonemartapp/widget/page/on_boarding/bloc/on_boarding_bloc.dart';
+import 'package:clonemartapp/widget/page/profile/bloc/profile_bloc.dart';
 import 'package:clonemartapp/widget/page/splash_screen/bloc/splash_screen_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -20,6 +22,7 @@ class BlocDI {
       ///B
 
       ///C
+      ..registerFactory<ChannelBloc>(ChannelBloc.new)
 
       ///D
 
@@ -40,6 +43,7 @@ class BlocDI {
       ..registerFactory<OtpVerificationBloc>(OtpVerificationBloc.new)
 
       ///P
+      ..registerLazySingleton<ProfileBloc>(ProfileBloc.new)
 
       ///R
 

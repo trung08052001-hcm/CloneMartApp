@@ -4,6 +4,7 @@ import 'package:clonemartapp/widget/page/auth/forgetpassword/forget_pass_page.da
 import 'package:clonemartapp/widget/page/auth/forgetpassword/page/otp_verification/otp_verification_page.dart';
 import 'package:clonemartapp/widget/page/main/main_page.dart';
 import 'package:clonemartapp/widget/page/on_boarding/on_boarding_page.dart';
+import 'package:clonemartapp/widget/page/profile/profile_page.dart';
 import 'package:clonemartapp/widget/page/splash_screen/splash_screen_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -29,7 +30,7 @@ class PageDI {
       //N
 
       //P
-
+      // ..registerFactory<Widget>(ProfilePage.new, instanceName: RouteConst.main)
       //O
       ..registerFactory<Widget>(OnBoardingPage.new,
           instanceName: RouteConst.onBoarding)

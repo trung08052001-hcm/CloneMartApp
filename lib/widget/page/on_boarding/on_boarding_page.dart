@@ -19,19 +19,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class OnBoardingPage extends StatelessWidget {
   final List<OnBoardingDetail> onBoardingList = <OnBoardingDetail>[
     OnBoardingDetail(
-        title: 'Take prescription from\na doctor',
-        content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-            'Aliquam mi eu, aliquam in porta vel ac sit',
+        title: 'Provide iPhone products',
+        content: 'Provide new and quality models',
         assetGenImage: Assets.images.mobilePhonePng),
     OnBoardingDetail(
         title: '24 hour service for\npatients',
-        content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-            'Aliquam mi eu, aliquam in porta vel ac sit',
+        content: 'Provide support for genuine Apple products',
         assetGenImage: Assets.images.iconError),
     OnBoardingDetail(
-        title: 'Best online doctor appointment app',
-        content: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-            'Aliquam mi eu, aliquam in porta vel ac sit',
+        title: 'Best online Chatbot app',
+        content: 'A chatbot that provides user support',
         assetGenImage: Assets.images.chatbot),
   ];
 
@@ -84,7 +81,8 @@ class OnBoardingPage extends StatelessWidget {
                   ),
                   AppButton.primary(
                     onTap: () {
-                      bloc.add(ChangePageEvent(index: state.currentIndex + 1));
+                      // bloc.add(ChangePageEvent(index: state.currentIndex + 1));
+                      getIt<NavigationService>().navigateTo(RouteConst.auth);
                     },
                     title: "Next",
                     borderRadius: 20.0,
@@ -93,16 +91,16 @@ class OnBoardingPage extends StatelessWidget {
                   const SizedBox(
                     height: 15.0,
                   ),
-                  if (state.currentIndex != 3)
-                    TextButtonApp(
-                      title: "S().Start",
-                      fontSize: 14,
-                      colorText: kGreyColor,
-                      onTap: () {
-                        bloc.add(StartLoginEvent());
-                        getIt<NavigationService>().navigateTo(RouteConst.auth);
-                      },
-                    ),
+                  // if (state.currentIndex != 2)
+                  //   TextButtonApp(
+                  //     title: "S().Start",
+                  //     fontSize: 14,
+                  //     colorText: kGreyColor,
+                  //     onTap: () {
+                  //       bloc.add(StartLoginEvent());
+                  //       getIt<NavigationService>().navigateTo(RouteConst.auth);
+                  //     },
+                  //   ),
                 ],
               );
             },
