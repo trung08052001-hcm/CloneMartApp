@@ -4,6 +4,7 @@ import 'package:clonemartapp/res/dimens.dart';
 
 import 'package:clonemartapp/widget/keep_alive_wraper.dart';
 import 'package:clonemartapp/widget/page/channel/channel_page.dart';
+import 'package:clonemartapp/widget/page/home/home_page.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_event.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_state.dart';
@@ -42,7 +43,7 @@ class _MainPageState extends State<MainPage> {
         physics: const NeverScrollableScrollPhysics(),
         children: <Widget>[
           ...<Widget>[
-            // HomePage(),
+            const HomePage(),
             // CategoryPage(),
             // AppointmentPage(),
             ChannelPage(),

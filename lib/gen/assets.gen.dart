@@ -48,6 +48,10 @@ class $AssetsIconsGen {
   SvgGenImage get iconFacebook =>
       const SvgGenImage('assets/icons/icon_facebook.svg');
 
+  /// File path: assets/icons/icon_favorite.svg
+  SvgGenImage get iconFavorite =>
+      const SvgGenImage('assets/icons/icon_favorite.svg');
+
   /// File path: assets/icons/icon_google.svg
   SvgGenImage get iconGoogle =>
       const SvgGenImage('assets/icons/icon_google.svg');
@@ -59,6 +63,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_history.svg
   SvgGenImage get iconHistory =>
       const SvgGenImage('assets/icons/icon_history.svg');
+
+  /// File path: assets/icons/icon_knee.svg
+  SvgGenImage get iconKnee => const SvgGenImage('assets/icons/icon_knee.svg');
 
   /// File path: assets/icons/icon_lock.svg
   SvgGenImage get iconLock => const SvgGenImage('assets/icons/icon_lock.svg');
@@ -85,13 +92,33 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_phone.svg
   SvgGenImage get iconPhone => const SvgGenImage('assets/icons/icon_phone.svg');
 
+  /// File path: assets/icons/icon_physycologist.svg
+  SvgGenImage get iconPhysycologist =>
+      const SvgGenImage('assets/icons/icon_physycologist.svg');
+
   /// File path: assets/icons/icon_right_arrow.svg
   SvgGenImage get iconRightArrow =>
       const SvgGenImage('assets/icons/icon_right_arrow.svg');
 
+  /// File path: assets/icons/icon_ring_bell.svg
+  SvgGenImage get iconRingBell =>
+      const SvgGenImage('assets/icons/icon_ring_bell.svg');
+
+  /// File path: assets/icons/icon_search.svg
+  SvgGenImage get iconSearch =>
+      const SvgGenImage('assets/icons/icon_search.svg');
+
+  /// File path: assets/icons/icon_search_mic.svg
+  SvgGenImage get iconSearchMic =>
+      const SvgGenImage('assets/icons/icon_search_mic.svg');
+
   /// File path: assets/icons/icon_show_password.svg
   SvgGenImage get iconShowPassword =>
       const SvgGenImage('assets/icons/icon_show_password.svg');
+
+  /// File path: assets/icons/icon_star-rating.svg
+  SvgGenImage get iconStarRating =>
+      const SvgGenImage('assets/icons/icon_star-rating.svg');
 
   /// File path: assets/icons/icon_success.svg
   SvgGenImage get iconSuccess =>
@@ -100,6 +127,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_support.svg
   SvgGenImage get iconSupport =>
       const SvgGenImage('assets/icons/icon_support.svg');
+
+  /// File path: assets/icons/icon_tooth.svg
+  SvgGenImage get iconTooth => const SvgGenImage('assets/icons/icon_tooth.svg');
 
   /// File path: assets/icons/icon_user copy.svg
   SvgGenImage get iconUserCopy =>
@@ -120,14 +150,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/user.svg
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
-  /// File path: assets/icons/icon_search.svg
-  SvgGenImage get iconSearch =>
-      const SvgGenImage('assets/icons/icon_search.svg');
-
-  /// File path: assets/icons/icon_search_mic.svg
-  SvgGenImage get iconSearchMic =>
-      const SvgGenImage('assets/icons/icon_search_mic.svg');
-
   /// List of all assets
   List<SvgGenImage> get values => [
         category,
@@ -140,9 +162,11 @@ class $AssetsIconsGen {
         iconEmail,
         iconExclamation,
         iconFacebook,
+        iconFavorite,
         iconGoogle,
         iconHidePassword,
         iconHistory,
+        iconKnee,
         iconLock,
         iconLogout,
         iconMark,
@@ -150,10 +174,16 @@ class $AssetsIconsGen {
         iconPaypal,
         iconPaystack,
         iconPhone,
+        iconPhysycologist,
         iconRightArrow,
+        iconRingBell,
+        iconSearch,
+        iconSearchMic,
         iconShowPassword,
+        iconStarRating,
         iconSuccess,
         iconSupport,
+        iconTooth,
         iconUserCopy,
         iconUser,
         iconVisa,

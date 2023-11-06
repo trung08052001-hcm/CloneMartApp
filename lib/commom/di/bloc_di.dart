@@ -3,6 +3,7 @@ import 'package:clonemartapp/widget/page/auth/authentication/bloc/auth_bloc.dart
 import 'package:clonemartapp/widget/page/auth/forgetpassword/bloc/forget_pass_bloc.dart';
 import 'package:clonemartapp/widget/page/auth/forgetpassword/page/otp_verification/bloc/otp_verification_bloc.dart';
 import 'package:clonemartapp/widget/page/channel/bloc/channel_bloc.dart';
+import 'package:clonemartapp/widget/page/home/bloc/home_bloc.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
 import 'package:clonemartapp/widget/page/on_boarding/bloc/on_boarding_bloc.dart';
 import 'package:clonemartapp/widget/page/profile/bloc/profile_bloc.dart';
@@ -30,6 +31,7 @@ class BlocDI {
       ..registerFactory<ForgetPasswordBloc>(ForgetPasswordBloc.new)
 
       ///H
+      ..registerFactory<HomeBloc>(HomeBloc.new)
 
       ///M
       ..registerLazySingleton<MainBloc>(MainBloc.new)
