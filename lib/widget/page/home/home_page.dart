@@ -1,6 +1,8 @@
 import 'package:clonemartapp/commom/di/app_injector.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/dimension_constant.dart';
+import 'package:clonemartapp/services/navigation_service.dart';
+import 'package:clonemartapp/widget/app_routes.dart';
 import 'package:clonemartapp/widget/appscaffold/app_scaffold.dart';
 import 'package:clonemartapp/widget/page/home/bloc/home_bloc.dart';
 import 'package:clonemartapp/widget/page/home/widget/appbar_home_page.dart';
@@ -16,7 +18,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bloc = getIt<HomeBloc>();
-
+    final NavigationService navigationService = getIt<NavigationService>();
     return AppScaffold(
       isPaddingDefault: true,
       body: Column(
@@ -35,7 +37,7 @@ class HomePage extends StatelessWidget {
                           bottom: 10.h),
                       child: AppBarHomePage(
                         onTap: () {
-                          // navigationService.navigateTo(RouteConst.notification);
+                          navigationService.navigateTo(RouteConst.notification);
                         },
                       ),
                     ),
@@ -69,7 +71,7 @@ class HomePage extends StatelessWidget {
                           //       //     .navigateTo(RouteConst.doctorList);
                           //     },
                           //     title: 'S().list_of_phone',
-                          //     child: DoctorList(
+                          //     child: PhoneList(
                           //       bloc: bloc,
                           //     )),
                         ],

@@ -28,7 +28,7 @@ class RouteConst {
   static const String auth = '/auth';
   // static const String message = '/main/message';
   // static const String doctorList = 'main/doctor_list';
-  // static const String notification = 'main/notification';
+  static const String notification = 'main/notification';
   // static const String payment = 'main/payment';
   static const String forgetPassowd = '/auth/forget_password';
   static const String otpVerification =
