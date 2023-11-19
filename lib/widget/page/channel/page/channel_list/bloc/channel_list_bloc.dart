@@ -9,8 +9,4 @@ class ChannelListBloc extends Bloc<ChannelListEvent, ChannelListState> {
   ChannelListBloc() : super(ChannelListInitial()) {
     on<ChannelListEvent>((event, emit) {});
   }
-  @override
-  Future<List<ChannelModel>> getData(int page) async {
-    return channels;
-  }
 }

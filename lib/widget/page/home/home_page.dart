@@ -7,6 +7,7 @@ import 'package:clonemartapp/widget/appscaffold/app_scaffold.dart';
 import 'package:clonemartapp/widget/page/home/bloc/home_bloc.dart';
 import 'package:clonemartapp/widget/page/home/widget/appbar_home_page.dart';
 import 'package:clonemartapp/widget/page/home/widget/caterogy_list.dart';
+import 'package:clonemartapp/widget/page/home/widget/list_phone.dart';
 import 'package:clonemartapp/widget/page/home/widget/list_view_iphone.dart';
 import 'package:clonemartapp/widget/page/section/see_all_section.dart';
 import 'package:flutter/material.dart';
@@ -65,15 +66,14 @@ class HomePage extends StatelessWidget {
                             child: CategoryList(),
                           ),
                           SizedBox(height: 15.h),
-                          // SeeAllSection(
-                          //     onTap: () {
-                          //       // navigationService
-                          //       //     .navigateTo(RouteConst.doctorList);
-                          //     },
-                          //     title: 'S().list_of_phone',
-                          //     child: PhoneList(
-                          //       bloc: bloc,
-                          //     )),
+                          // SizedBox(height: 500, child: List_Phone()),
+                          SeeAllSection(
+                              onTap: () {
+                                // navigationService
+                                //     .navigateTo(RouteConst.doctorList);
+                              },
+                              title: 'S().list_of_phone',
+                              child: List_Phone()),
                         ],
                       ),
                     )),

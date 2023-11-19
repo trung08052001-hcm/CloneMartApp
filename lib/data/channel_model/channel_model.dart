@@ -23,7 +23,7 @@ final List<ChannelModel> channels = <ChannelModel>[
   ),
   ChannelModel(
     avatar:
-        'https://vfdc.com.vn/wp-content/uploads/2020/12/wysiwyg-uploads_1569586526901-doctor.jpg',
+        'https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
     name: 'iPhone 15 Plus',
     countMessage: 1,
   ),

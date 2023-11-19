@@ -1,4 +1,5 @@
 import 'package:clonemartapp/commom/config/network_config.dart';
+import 'package:clonemartapp/commom/di/Dio_di.dart';
 import 'package:clonemartapp/commom/di/api_di.dart';
 import 'package:clonemartapp/commom/di/bloc_di.dart';
 import 'package:clonemartapp/commom/di/database_di.dart';
@@ -33,5 +34,6 @@ class AppInjector {
     await UseCaseDI.init(injector);
     await BlocDI.init(injector);
     await PageDI.init(injector);
+    await DioDI.init(injector);
   }
 }
