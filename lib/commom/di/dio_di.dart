@@ -9,7 +9,7 @@ class DioDI {
     injector.registerSingleton<DioConfig>(
       DioConfig(
           baseUrl:
-              'https://37dd-2001-ee0-4f0e-a700-353a-38a-3151-d975.ngrok.io'),
+              'https://422d-2001-ee0-4f0e-a700-c9d4-8288-3f3b-9bf3.ngrok.io'),
     );
 
     injector.registerLazySingleton<Dio>(() {

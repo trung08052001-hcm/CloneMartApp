@@ -1,3 +1,4 @@
+import 'package:clonemartapp/commom/config/dio_config.dart';
 import 'package:clonemartapp/commom/di/app_injector.dart';
 import 'package:clonemartapp/widget/textfield/app_textfield.dart';
 import 'package:dio/dio.dart';
@@ -14,12 +15,11 @@ class _ChatScreenState extends State<ChatScreen> {
     {'sender': 'NOVA', 'text': 'Welcome to NOVA Chatbot! How can I help you?'},
   ];
 
-  late Dio _dio;
-
+  late ChatApiHelper _apiHelper;
   @override
   void initState() {
     super.initState();
-    _dio = getIt<Dio>();
+    _apiHelper = ChatApiHelper();
   }
 
   @override
@@ -78,30 +78,22 @@ class _ChatScreenState extends State<ChatScreen> {
                 onPressed: () async {
                   final text = _controller.text.trim();
                   if (text.isNotEmpty) {
-                    try {
-                      final response = await _dio.post(
-                        '/webhooks/rest/webhook',
-                        data: {'message': text},
-                      );
+                    final apiResult = await _apiHelper.sendMessage(text);
 
-                      if (response.data != null) {
-                        print('Response Data: ${response.data}');
-
-                        final result = response.data[0]['text'];
-                        print('Result: $result');
-
-                        setState(() {
-                          _messages.add({'sender': 'ME', 'text': text});
-                          _messages.add({'sender': 'BOT', 'text': result});
-                          _controller.clear();
-                        });
-                      }
-                    } catch (error) {
-                      print('Error: $error');
+                    if (apiResult['success']) {
+                      final result = apiResult['result'];
+                      setState(() {
+                        _messages.add({'sender': 'ME', 'text': text});
+                        _messages.add({'sender': 'BOT', 'text': result});
+                        _controller.clear();
+                      });
+                    } else {
+                      // Xử lý lỗi
+                      print('API Error: ${apiResult['error']}');
                     }
                   }
                 },
-              ),
+              )
             ],
           ),
         ),

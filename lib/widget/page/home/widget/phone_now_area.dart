@@ -1,4 +1,4 @@
-import 'package:clonemartapp/data/phone_model/phone_model.dart';
+import 'package:clonemartapp/data/phone_model/consultants_model.dart';
 import 'package:clonemartapp/gen/assets.gen.dart';
 import 'package:clonemartapp/res/color_core.dart';
 import 'package:clonemartapp/res/dimens.dart';
@@ -12,7 +12,7 @@ class PhoneNowArea extends StatelessWidget {
     required this.phone,
   });
 
-  final PhoneModel phone;
+  final ConsultantsModel phone;
 
   @override
   Widget build(BuildContext context) {

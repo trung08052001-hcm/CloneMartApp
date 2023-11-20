@@ -1,4 +1,4 @@
-import 'package:clonemartapp/data/phone_model/phone_model.dart';
+import 'package:clonemartapp/data/phone_model/consultants_model.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/themes/text_theme.dart';
 import 'package:clonemartapp/widget/page/container/network_image.dart';
@@ -11,7 +11,7 @@ class PhoneInfo extends StatelessWidget {
     Key? key,
     required this.phone,
   }) : super(key: key);
-  final PhoneModel phone;
+  final ConsultantsModel phone;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -35,7 +35,7 @@ class PhoneInfo extends StatelessWidget {
               style: fontApp.copyWith(fontSize: 11, color: textWhiteColor),
             ),
             SizedBox(height: 10.h),
-            const RatingDoctor(),
+            const RatingPhone(),
             SizedBox(height: 5.h),
             PhoneNowArea(
               phone: phone,

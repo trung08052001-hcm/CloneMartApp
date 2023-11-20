@@ -4,8 +4,8 @@ import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/themes/text_theme.dart';
 import 'package:flutter/material.dart';
 
-class RatingDoctor extends StatelessWidget {
-  const RatingDoctor({
+class RatingPhone extends StatelessWidget {
+  const RatingPhone({
     super.key,
     this.fontsize,
     this.reviews,

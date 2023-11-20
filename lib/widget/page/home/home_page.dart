@@ -68,12 +68,14 @@ class HomePage extends StatelessWidget {
                           SizedBox(height: 15.h),
                           // SizedBox(height: 500, child: List_Phone()),
                           SeeAllSection(
-                              onTap: () {
-                                // navigationService
-                                //     .navigateTo(RouteConst.doctorList);
-                              },
-                              title: 'S().list_of_phone',
-                              child: List_Phone()),
+                            onTap: () {},
+                            title: 'S().avai_phone',
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: kDefaultPadding),
+                              child: ListPhoneHome(),
+                            ),
+                          ),
                         ],
                       ),
                     )),

@@ -150,6 +150,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/user.svg
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
+  /// File path: assets/icons/icon_favorite_fill.svg
+  SvgGenImage get iconFavoriteFill =>
+      const SvgGenImage('assets/icons/icon_favorite_fill.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         category,

@@ -3,6 +3,7 @@ import 'package:clonemartapp/res/color_core.dart';
 import 'package:clonemartapp/res/dimens.dart';
 
 import 'package:clonemartapp/widget/keep_alive_wraper.dart';
+import 'package:clonemartapp/widget/page/category/category_page.dart';
 import 'package:clonemartapp/widget/page/channel/channel_page.dart';
 import 'package:clonemartapp/widget/page/home/home_page.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
@@ -44,7 +45,7 @@ class _MainPageState extends State<MainPage> {
         children: <Widget>[
           ...<Widget>[
             const HomePage(),
-            // CategoryPage(),
+            CategoryPage(),
             // AppointmentPage(),
             ChannelPage(),
             ProfilePage(),
