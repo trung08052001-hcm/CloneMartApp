@@ -1,4 +1,4 @@
-import 'package:clonemartapp/data/phone_model/consultants_model.dart';
+import 'package:clonemartapp/data/consultants/consultants_model.dart';
 import 'package:clonemartapp/data/phone_model/phone_models.dart';
 import 'package:clonemartapp/res/color_core.dart';
 import 'package:clonemartapp/res/dimens.dart';

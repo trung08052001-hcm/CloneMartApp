@@ -1,12 +1,11 @@
-import 'package:clonemartapp/data/consultants/consultants_model.dart';
+import 'package:clonemartapp/data/information/information_model.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/widget/page/button/favorite_button.dart';
-import 'package:clonemartapp/widget/page/category/widget/top_rate_phone/phone_item.dart';
-import 'package:clonemartapp/widget/page/category/widget/top_rate_phone/top_rate_phone.dart';
+import 'package:clonemartapp/widget/page/information/widget/information_item.dart';
 import 'package:flutter/material.dart';
 
-class AvailablePhone extends StatelessWidget {
-  const AvailablePhone({
+class AvailableInfor extends StatelessWidget {
+  const AvailableInfor({
     super.key,
   });
 
@@ -15,8 +14,8 @@ class AvailablePhone extends StatelessWidget {
     return ListView.separated(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
-        itemBuilder: (_, int index) => PhoneItem(
-            phone: consultants[index],
+        itemBuilder: (_, int index) => InformationItem(
+            infor: informodel[index],
             icon: FavoriteButton(
               onTap: () {},
             )),

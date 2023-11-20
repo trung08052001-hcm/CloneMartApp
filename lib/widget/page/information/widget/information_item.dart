@@ -1,20 +1,18 @@
-import 'package:clonemartapp/data/consultants/consultants_model.dart';
-import 'package:clonemartapp/data/phone_model/phone_models.dart';
+import 'package:clonemartapp/data/information/information_model.dart';
 import 'package:clonemartapp/res/color_core.dart';
 import 'package:clonemartapp/res/dimens.dart';
-import 'package:clonemartapp/widget/page/category/widget/top_rate_phone/phone_infor.dart';
 import 'package:clonemartapp/widget/page/container/network_image.dart';
-import 'package:clonemartapp/widget/page/home/widget/phone_information_home.dart';
+import 'package:clonemartapp/widget/page/information/widget/information_contract.dart';
 import 'package:flutter/material.dart';
 
-class PhoneItemHome extends StatelessWidget {
-  const PhoneItemHome({
+class InformationItem extends StatelessWidget {
+  const InformationItem({
     Key? key,
-    required this.phone,
+    required this.infor,
     required this.icon,
   }) : super(key: key);
 
-  final PhoneModels phone;
+  final InforModels infor;
   final Widget icon;
 
   @override
@@ -31,7 +29,7 @@ class PhoneItemHome extends StatelessWidget {
         NetWorkImageWidget(
           height: double.infinity,
           width: 80.w,
-          url: phone.avatar,
+          url: infor.avatar,
         ),
         SizedBox(
           width: 23.w,
@@ -39,8 +37,8 @@ class PhoneItemHome extends StatelessWidget {
         SizedBox(
           height: 120.h,
           width: 133,
-          child: PhoneInforHome(
-            phone: phone,
+          child: InforContract(
+            phone: infor,
             icon: icon,
           ),
         ),

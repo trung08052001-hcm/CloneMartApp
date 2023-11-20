@@ -22,69 +22,65 @@ class HomePage extends StatelessWidget {
     final NavigationService navigationService = getIt<NavigationService>();
     return AppScaffold(
       isPaddingDefault: true,
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: BlocBuilder<HomeBloc, HomeState>(
-              bloc: bloc,
-              builder: (BuildContext context, HomeState state) {
-                return Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: kDefaultPadding,
-                          right: kDefaultPadding,
-                          top: 50.h,
-                          bottom: 10.h),
-                      child: AppBarHomePage(
-                        onTap: () {
-                          navigationService.navigateTo(RouteConst.notification);
-                        },
+      body: Expanded(
+        child: BlocBuilder<HomeBloc, HomeState>(
+          bloc: bloc,
+          builder: (BuildContext context, HomeState state) {
+            return Column(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: kDefaultPadding,
+                      right: kDefaultPadding,
+                      top: 50.h,
+                      bottom: 10.h),
+                  child: AppBarHomePage(
+                    onTap: () {
+                      navigationService.navigateTo(RouteConst.notification);
+                    },
+                  ),
+                ),
+                Expanded(
+                    child: SingleChildScrollView(
+                  controller: bloc.scrollController,
+                  physics: const BouncingScrollPhysics(),
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: kDefaultPadding, vertical: 10.h),
+                        child: SearchBar(onTap: () {
+                          // navigationService.navigateTo(RouteConst.search);
+                        }),
                       ),
-                    ),
-                    Expanded(
-                        child: SingleChildScrollView(
-                      controller: bloc.scrollController,
-                      physics: const BouncingScrollPhysics(),
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: kDefaultPadding, vertical: 10.h),
-                            child: SearchBar(onTap: () {
-                              // navigationService.navigateTo(RouteConst.search);
-                            }),
-                          ),
-                          SizedBox(
-                            height: 20.h,
-                          ),
-                          const ListViewPhone(),
-                          SizedBox(height: 15.h),
-                          SeeAllSection(
-                            onTap: () {},
-                            title: 'S().categories',
-                            child: CategoryList(),
-                          ),
-                          SizedBox(height: 15.h),
-                          // SizedBox(height: 500, child: List_Phone()),
-                          SeeAllSection(
-                            onTap: () {},
-                            title: 'S().avai_phone',
-                            child: Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: kDefaultPadding),
-                              child: ListPhoneHome(),
-                            ),
-                          ),
-                        ],
+                      SizedBox(
+                        height: 20.h,
                       ),
-                    )),
-                  ],
-                );
-              },
-            ),
-          ),
-        ],
+                      const ListViewPhone(),
+                      SizedBox(height: 15.h),
+                      SeeAllSection(
+                        onTap: () {},
+                        title: 'S().categories',
+                        child: CategoryList(),
+                      ),
+                      SizedBox(height: 15.h),
+                      // SizedBox(height: 500, child: List_Phone()),
+                      SeeAllSection(
+                        onTap: () {},
+                        title: 'S().avai_phone',
+                        child: Padding(
+                          padding:
+                              EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                          child: ListPhoneHome(),
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+              ],
+            );
+          },
+        ),
       ),
     );
   }

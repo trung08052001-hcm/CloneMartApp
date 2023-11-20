@@ -6,6 +6,7 @@ import 'package:clonemartapp/widget/page/category/bloc/category_bloc.dart';
 import 'package:clonemartapp/widget/page/channel/bloc/channel_bloc.dart';
 import 'package:clonemartapp/widget/page/home/bloc/home_bloc.dart';
 import 'package:clonemartapp/widget/page/home/widget/list_notification/bloc/notification_bloc.dart';
+import 'package:clonemartapp/widget/page/information/bloc/information_new_bloc.dart';
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
 import 'package:clonemartapp/widget/page/on_boarding/bloc/on_boarding_bloc.dart';
 import 'package:clonemartapp/widget/page/profile/bloc/profile_bloc.dart';
@@ -43,6 +44,9 @@ class BlocDI {
       ..registerFactory<NotificationBloc>(NotificationBloc.new)
 
       ///L
+
+      ///I
+      ..registerFactory<InformationNewBloc>(InformationNewBloc.new)
 
       ///O
       ..registerLazySingleton<OnBoardingBloc>(OnBoardingBloc.new)

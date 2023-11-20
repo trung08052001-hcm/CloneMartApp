@@ -1,22 +1,19 @@
-import 'package:clonemartapp/commom/di/app_injector.dart';
-import 'package:clonemartapp/data/consultants/consultants_model.dart';
+import 'package:clonemartapp/data/information/information_model.dart';
 import 'package:clonemartapp/res/color_core.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/themes/text_theme.dart';
-import 'package:clonemartapp/services/navigation_service.dart';
-import 'package:clonemartapp/widget/app_routes.dart';
 import 'package:clonemartapp/widget/page/button/app_button.dart';
 import 'package:clonemartapp/widget/page/home/widget/rating_phone.dart';
 import 'package:flutter/material.dart';
 
-class PhoneInformation extends StatelessWidget {
-  const PhoneInformation({
+class InforContract extends StatelessWidget {
+  const InforContract({
     super.key,
     required this.phone,
     required this.icon,
   });
 
-  final ConsultantsModel phone;
+  final InforModels phone;
 
   final Widget? icon;
 

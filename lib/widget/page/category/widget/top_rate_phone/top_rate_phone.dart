@@ -1,4 +1,4 @@
-import 'package:clonemartapp/data/phone_model/consultants_model.dart';
+import 'package:clonemartapp/data/consultants/consultants_model.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/dimension_constant.dart';
 import 'package:clonemartapp/widget/page/category/widget/top_rate_phone/top_rate_phone_item.dart';
