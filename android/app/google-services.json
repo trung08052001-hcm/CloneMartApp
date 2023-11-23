@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1095285211227",
+    "project_id": "clonemartapp-e8e73",
+    "storage_bucket": "clonemartapp-e8e73.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095285211227:android:5ee97aaae912334be4bf7e",
+        "android_client_info": {
+          "package_name": "com.example.clonemartapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtTNEIrn7WGXzA9HGTeRvlAD2sij8hTrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

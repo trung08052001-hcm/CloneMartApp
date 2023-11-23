@@ -1,6 +1,7 @@
 import 'package:clonemartapp/commom/config/network_config.dart';
 import 'package:clonemartapp/commom/di/app_injector.dart';
 import 'package:clonemartapp/res/color_core.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -15,7 +16,8 @@ class AppConfig {
 
   Future<void> configApp({required BuildMode buildMode}) async {
     WidgetsFlutterBinding.ensureInitialized();
-
+    //firebase
+    // await Firebase.initializeApp();
     await AppInjector.initializeDependencies(buildMode);
     //configLoading();
     handleErrors();

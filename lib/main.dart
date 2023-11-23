@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           theme: state.theme,
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRoute.getRoute,
-          initialRoute: RouteConst.main,
+          initialRoute: RouteConst.auth,
           builder: (BuildContext childContext, Widget? child) {
             getIt<SizeConfig>().setMq(childContext);
             return child ?? const SizedBox();
