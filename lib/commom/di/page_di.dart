@@ -5,6 +5,11 @@ import 'package:clonemartapp/widget/page/auth/forgetpassword/page/otp_verificati
 import 'package:clonemartapp/widget/page/home/widget/list_notification/notification_model.dart';
 import 'package:clonemartapp/widget/page/main/main_page.dart';
 import 'package:clonemartapp/widget/page/on_boarding/on_boarding_page.dart';
+import 'package:clonemartapp/widget/page/profile/page/account/account_page.dart';
+import 'package:clonemartapp/widget/page/profile/page/address/address_page.dart';
+import 'package:clonemartapp/widget/page/profile/page/address/bloc/address_bloc.dart';
+import 'package:clonemartapp/widget/page/profile/page/history/history_page.dart';
+import 'package:clonemartapp/widget/page/profile/page/payment_method/payment_method_page.dart';
 import 'package:clonemartapp/widget/page/profile/profile_page.dart';
 import 'package:clonemartapp/widget/page/splash_screen/splash_screen_page.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +22,10 @@ class PageDI {
     injector
       //A
       ..registerFactory<Widget>(AuthPage.new, instanceName: RouteConst.auth)
+      ..registerFactory<Widget>(AccountPage.new,
+          instanceName: RouteConst.account)
+      ..registerFactory<Widget>(AddressPage.new,
+          instanceName: RouteConst.address)
       //C
 
       //D
@@ -33,7 +42,10 @@ class PageDI {
       ..registerFactory<Widget>(NotificationPage.new,
           instanceName: RouteConst.notification)
       //P
-      // ..registerFactory<Widget>(ProfilePage.new, instanceName: RouteConst.main)
+      ..registerFactory<Widget>(HistoryPage.new,
+          instanceName: RouteConst.history)
+      ..registerFactory<Widget>(PaymentMethodPage.new,
+          instanceName: RouteConst.payment)
       //O
       ..registerFactory<Widget>(OnBoardingPage.new,
           instanceName: RouteConst.onBoarding)

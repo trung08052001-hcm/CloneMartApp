@@ -10,6 +10,10 @@ import 'package:clonemartapp/widget/page/information/bloc/information_new_bloc.d
 import 'package:clonemartapp/widget/page/main/bloc/main_bloc.dart';
 import 'package:clonemartapp/widget/page/on_boarding/bloc/on_boarding_bloc.dart';
 import 'package:clonemartapp/widget/page/profile/bloc/profile_bloc.dart';
+import 'package:clonemartapp/widget/page/profile/page/account/bloc/account_bloc.dart';
+import 'package:clonemartapp/widget/page/profile/page/address/bloc/address_bloc.dart';
+import 'package:clonemartapp/widget/page/profile/page/history/bloc/history_bloc.dart';
+import 'package:clonemartapp/widget/page/profile/page/payment_method/bloc/payment_method_bloc.dart';
 import 'package:clonemartapp/widget/page/splash_screen/bloc/splash_screen_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -22,6 +26,8 @@ class BlocDI {
       ///A
       ..registerLazySingleton<AppBloc>(AppBloc.new)
       ..registerLazySingleton<AuthBloc>(AuthBloc.new)
+      ..registerLazySingleton<AccountBloc>(AccountBloc.new)
+      ..registerLazySingleton<AddressBloc>(AddressBloc.new)
 
       ///B
 
@@ -35,6 +41,7 @@ class BlocDI {
       ..registerFactory<ForgetPasswordBloc>(ForgetPasswordBloc.new)
 
       ///H
+      ..registerFactory<DeliveryHistoryBloc>(DeliveryHistoryBloc.new)
       ..registerFactory<HomeBloc>(HomeBloc.new)
 
       ///M
@@ -54,6 +61,7 @@ class BlocDI {
 
       ///P
       ..registerLazySingleton<ProfileBloc>(ProfileBloc.new)
+      ..registerLazySingleton<PaymentMethodBloc>(PaymentMethodBloc.new)
 
       ///R
 

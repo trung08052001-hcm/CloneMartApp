@@ -7,19 +7,19 @@ extension ProfileTypeEx on ProfileType {
   String get navigateKey {
     switch (this) {
       case ProfileType.history:
-        return RouteConst.main;
+        return RouteConst.history;
       case ProfileType.personal:
-        return RouteConst.main;
+        return RouteConst.account;
       case ProfileType.address:
-        return RouteConst.main;
+        return RouteConst.address;
       case ProfileType.payment:
-        return RouteConst.main;
+        return RouteConst.payment;
       case ProfileType.about:
         return RouteConst.main;
       case ProfileType.help:
         return RouteConst.main;
       case ProfileType.logout:
-        return RouteConst.main;
+        return RouteConst.auth;
     }
   }
 
