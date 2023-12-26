@@ -34,6 +34,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/icon_card.svg
   SvgGenImage get iconCard => const SvgGenImage('assets/icons/icon_card.svg');
 
+  /// File path: assets/icons/icon_checkbox.svg
+  SvgGenImage get iconCheckbox =>
+      const SvgGenImage('assets/icons/icon_checkbox.svg');
+
   /// File path: assets/icons/icon_edit.svg
   SvgGenImage get iconEdit => const SvgGenImage('assets/icons/icon_edit.svg');
 
@@ -154,10 +158,6 @@ class $AssetsIconsGen {
   /// File path: assets/icons/user.svg
   SvgGenImage get user => const SvgGenImage('assets/icons/user.svg');
 
-  /// File path: assets/icons/icon_checkbox.svg
-  SvgGenImage get iconCheckbox =>
-      const SvgGenImage('assets/icons/icon_checkbox.svg');
-
   /// List of all assets
   List<SvgGenImage> get values => [
         category,
@@ -166,6 +166,7 @@ class $AssetsIconsGen {
         iconAdd,
         iconBackIos,
         iconCard,
+        iconCheckbox,
         iconEdit,
         iconEmail,
         iconExclamation,
@@ -198,8 +199,7 @@ class $AssetsIconsGen {
         iconVisa,
         message,
         time,
-        user,
-        iconCheckbox
+        user
       ];
 }
 

@@ -16,7 +16,7 @@ class AccountImage extends StatelessWidget {
         children: <Widget>[
           NetWorkImageWidget(
             url:
-                'https://scontent.fsgn8-4.fna.fbcdn.net/v/t1.6435-9/123806964_2684711161781513_4760063319611442908_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=lv8AlEDm2qkAX_x187L&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfCVMr1ufnAPAxEPlkyHs9Ofpn7nbsvux6ahAskbpnbb6g&oe=656C6364',
+                'https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/327764172_886402092507227_5214911061825876344_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9c7eae&_nc_ohc=RHKBwIl5uOgAX_o6XTm&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfCt_E8tJX0vAicD5iuyVavygp7syb5_uPhnOmL8wYExGg&oe=658D2C52',
             width: 80.h,
             height: 80.h,
             borderRadius: 15.r,
