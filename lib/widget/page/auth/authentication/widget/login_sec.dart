@@ -11,10 +11,15 @@ import 'package:clonemartapp/widget/textfield/app_textfield.dart';
 import 'package:flutter/material.dart';
 
 class LoginSection extends StatelessWidget {
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
   LoginSection({
     super.key,
+    required this.emailController,
+    required this.passwordController,
   });
   final NavigationService navigationService = getIt<NavigationService>();
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -31,6 +36,7 @@ class LoginSection extends StatelessWidget {
         InfoSection(
           title: 'Email',
           child: AppTextField(
+            controller: emailController,
             prefixIcon: Assets.icons.iconEmail.svg(),
             hintText: 'S().enter_email',
           ),
@@ -41,6 +47,7 @@ class LoginSection extends StatelessWidget {
         InfoSection(
           title: 'S().password',
           child: AppTextField(
+            controller: passwordController,
             prefixIcon: Assets.icons.iconLock.svg(),
             hintText: 'S().enter_password',
           ),

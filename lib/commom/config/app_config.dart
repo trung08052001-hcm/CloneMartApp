@@ -17,7 +17,7 @@ class AppConfig {
   Future<void> configApp({required BuildMode buildMode}) async {
     WidgetsFlutterBinding.ensureInitialized();
     //firebase
-    // await Firebase.initializeApp();
+    await Firebase.initializeApp();
     await AppInjector.initializeDependencies(buildMode);
     //configLoading();
     handleErrors();

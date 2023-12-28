@@ -16,10 +16,12 @@ import 'package:clonemartapp/widget/page/auth/authentication/widget/login_three_
 import 'package:clonemartapp/widget/page/auth/authentication/widget/sign_up_sec.dart';
 import 'package:clonemartapp/widget/page/button/app_button.dart';
 import 'package:clonemartapp/widget/page/button/text_button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:clonemartapp/services/auth_service.dart';
 
 class AuthView extends StatelessWidget {
-  const AuthView({
+  AuthView({
     super.key,
     required this.isLogin,
     required this.bloc,
@@ -27,6 +29,35 @@ class AuthView extends StatelessWidget {
 
   final bool isLogin;
   final AuthBloc bloc;
+  final AuthService _authService = AuthService();
+  final NavigationService _navigationService = getIt<NavigationService>();
+  final TextEditingController fullNameController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  Future<void> _handleSignIn(String email, String password) async {
+    try {
+      User? user =
+          await _authService.signInWithEmailAndPassword(email, password);
+      if (user != null) {
+        _navigationService.navigateTo(RouteConst.main);
+      } else {}
+    } catch (e) {
+      print('Error signing in: $e');
+    }
+  }
+
+  Future<void> _handleSignUp(String email, String password) async {
+    try {
+      User? user =
+          await _authService.signUpWithEmailAndPassword(email, password);
+      if (user != null) {
+        _navigationService.navigateTo(RouteConst.auth);
+      } else {}
+    } catch (e) {
+      print('Error signing up: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,12 +77,29 @@ class AuthView extends StatelessWidget {
           ),
           AnimatedSwitcher(
             duration: const Duration(milliseconds: 1000),
-            child: isLogin ? LoginSection() : const SignUpSection(),
+            child: isLogin
+                ? LoginSection(
+                    emailController: emailController,
+                    passwordController: passwordController)
+                : SignUpSection(
+                    fullNameController: fullNameController,
+                    passwordController: passwordController,
+                    emailController: emailController,
+                    phoneController: phoneController,
+                  ),
           ),
           const Spacer(),
           AppButton.primary(
-            onTap: () {
-              getIt<NavigationService>().navigateTo(RouteConst.main);
+            onTap: () async {
+              if (isLogin) {
+                // Đăng nhập
+                await _handleSignIn(
+                    emailController.text, passwordController.text);
+              } else {
+                // Đăng ký
+                await _handleSignUp(
+                    emailController.text, passwordController.text);
+              }
             },
             title: isLogin ? "S().sign_in" : "S().sign_up",
             height: 50.h,

@@ -8,7 +8,7 @@ import 'package:clonemartapp/widget/app_routes.dart';
 
 class AuthService {
   final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   Future<void> loginWithGoogle() async {
     try {
       // Check if there's a GoogleSignIn operation in progress
@@ -58,6 +58,35 @@ class AuthService {
       }
     } catch (e) {
       print('Error during Facebook login: $e');
+    }
+  }
+
+  Future<User?> signInWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return userCredential.user;
+    } catch (e) {
+      print('Error signing in: $e');
+      return null;
+    }
+  }
+
+  Future<User?> signUpWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      UserCredential userCredential =
+          await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return userCredential.user;
+    } catch (e) {
+      print('Error signing up: $e');
+      return null;
     }
   }
 }

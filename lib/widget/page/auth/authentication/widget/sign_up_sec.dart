@@ -6,8 +6,16 @@ import 'package:flutter/material.dart';
 import '../../../../../gen/assets.gen.dart';
 
 class SignUpSection extends StatelessWidget {
-  const SignUpSection({
+  final TextEditingController fullNameController;
+  final TextEditingController passwordController;
+  final TextEditingController emailController;
+  final TextEditingController phoneController;
+  SignUpSection({
     super.key,
+    required this.fullNameController,
+    required this.passwordController,
+    required this.emailController,
+    required this.phoneController,
   });
 
   @override
@@ -17,6 +25,7 @@ class SignUpSection extends StatelessWidget {
         InfoSection(
           title: 'S().fullName',
           child: AppTextField(
+            controller: fullNameController,
             prefixIcon: Assets.icons.iconUser.svg(),
             hintText: 'S().enter_full_name',
           ),
@@ -27,6 +36,7 @@ class SignUpSection extends StatelessWidget {
         InfoSection(
           title: 'S().password',
           child: AppTextField(
+            controller: passwordController,
             prefixIcon: Assets.icons.iconLock.svg(),
             hintText: 'S().enter_password',
           ),
@@ -37,6 +47,7 @@ class SignUpSection extends StatelessWidget {
         InfoSection(
           title: 'Email',
           child: AppTextField(
+            controller: emailController,
             prefixIcon: Assets.icons.iconEmail.svg(),
             hintText: 'S().enter_mail',
           ),
@@ -47,6 +58,7 @@ class SignUpSection extends StatelessWidget {
         InfoSection(
           title: 'S().phone',
           child: AppTextField(
+            controller: phoneController,
             prefixIcon: Assets.icons.iconPhone.svg(),
             hintText: 'S().enter_phone',
             isPhone: true,
