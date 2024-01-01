@@ -3,6 +3,7 @@ import 'package:clonemartapp/res/color_core.dart';
 import 'package:clonemartapp/res/dimens.dart';
 import 'package:clonemartapp/res/dimension_constant.dart';
 import 'package:clonemartapp/res/themes/text_theme.dart';
+import 'package:clonemartapp/services/firestore_service.dart';
 import 'package:clonemartapp/services/navigation_service.dart';
 import 'package:clonemartapp/widget/app_bar.dart/default_app_bar.dart';
 import 'package:clonemartapp/widget/app_routes.dart';
@@ -35,6 +36,7 @@ class AuthView extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController phoneController = TextEditingController();
+  final FirestoreService _firestoreService = FirestoreService();
   Future<void> _handleSignIn(String email, String password) async {
     try {
       User? user =
@@ -52,8 +54,18 @@ class AuthView extends StatelessWidget {
       User? user =
           await _authService.signUpWithEmailAndPassword(email, password);
       if (user != null) {
-        _navigationService.navigateTo(RouteConst.auth);
-      } else {}
+        print('User created successfully: ${user.uid}');
+
+        // save data firestore
+        await _firestoreService.saveUserData(
+          fullName: fullNameController.text,
+          email: emailController.text,
+          phone: phoneController.text,
+        );
+        _navigationService.navigateTo(RouteConst.main);
+      } else {
+        print('User creation failed.');
+      }
     } catch (e) {
       print('Error signing up: $e');
     }
